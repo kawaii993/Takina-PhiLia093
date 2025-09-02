@@ -17,13 +17,13 @@ export interface RSSResponse {
 export default defineEventHandler(async (event): Promise<RSSResponse> => {
   try {
     // 从配置中获取 RSS URL
-    const rssUrl = 'https://blog.sakura.ink/rss.xml'//自定义文章的RSS地址
+    const rssUrl = 'https://home.takinablog.top/rss.xml'//自定义文章的RSS地址
     
     // 获取 RSS 数据，设置超时和重试
     const response = await $fetch<string>(rssUrl, {
       timeout: 10000, // 10秒超时
       headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; Nuxt RSS Reader; +https://haku.sakura.ink)',
+        'User-Agent': 'Takina/5.0 (compatible; Nuxt RSS Reader; +https://home.takinablog.top)',
         'Accept': 'application/rss+xml, application/xml, text/xml, */*'
       }
     })

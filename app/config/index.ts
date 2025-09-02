@@ -28,7 +28,7 @@ export const siteConfig = {
     description: "欢迎来到Takina PhiLia的温柔世界，在这里分享技术、生活和思考",
 
     // 网站URL - 完整的域名地址
-    url: "https://haku.sakura.ink",
+    url: "https://philia.takinablog.top",
 
   },
 
@@ -57,7 +57,7 @@ export const siteConfig = {
   // ========================================
   home: {
     // 主标题（通常使用site.title）
-    mainTitle: "Fumomo",
+    mainTitle: "TakinaBlog",
 
     // 欢迎语句
     welcomeText: "一个充满温暖与创意的小窝",
