@@ -206,7 +206,7 @@ watch(() => route.query.page, (newPage, oldPage) => {
             </div>
             <div class="flex items-center gap-4">
               <a 
-                href="https://blog.sakura.ink" 
+                href="https://home.takinablog.top" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 class="flex items-center gap-2 bg-primary text-white px-3 py-1.5 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-opacity-90 hover:scale-105 no-underline"
@@ -479,7 +479,7 @@ watch(() => route.query.page, (newPage, oldPage) => {
 
 /* 文章页面特定样式 */
 .articles-page .hover\:shadow-lg:hover {
-  box-shadow: 0 8px 25px rgba(139,90,140,0.15);
+  box-shadow: 0 8px 25px rgba(159, 26, 161, 0.15);
 }
 
 /* 为文章卡片添加过渡效果 */

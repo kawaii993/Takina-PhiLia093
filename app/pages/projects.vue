@@ -98,32 +98,25 @@ interface Project {
 // 项目数据
 const projects: Project[] = [
   {
-    title: 'Fumomo',
-    description: '基于 Astro 构建的个人主页，温暖而现代的设计风格(暂未开源)',
-    demoUrl: 'https://fumofumo.vercel.app',
-    githubUrl: 'https://github.com/Hakutyan-bai/fumomo',
+    title: '🏡 TakinaBlog',
+    description: '基于 Astro 构建的个人主页，美观且清晰的设计风格',
+    demoUrl: 'https://home.takinablog.top',
+    githubUrl: 'https://github.com/kawaii993/TakinaBlog',
     demoText: '预览项目'
   },
   {
-    title: 'Fumomo-Nuxt',
-    description: '从 Astro 迁移到 Nuxt 的个人主页，温暖而现代的设计风格(暂未开源)',
-    demoUrl: 'https://fumomo-nuxt.vercel.app',
-    githubUrl: 'https://github.com/Hakutyan-bai/fumomo-nuxt',
+    title: '📒 Philia',
+    description: '基于博客衍生的个人文字站',
+    demoUrl: 'https://philia.takinablog.top',
+    githubUrl: 'https://github.com/kawaii993/Takina-PhiLia093',
     demoText: '预览项目'
   },
   {
-    title: 'file-sharing-site',
-    description: '一个外链文件分享站，支持文件变动通知',
-    demoUrl: '#',
-    githubUrl: 'https://github.com/Hakutyan-bai/file-sharing-site',
-    demoText: '暂无预览'
-  },
-  {
-    title: 'AutoFeedMod',
-    description: '一个MC模组，实现了便携式的自动喂养功能',
-    demoUrl: 'https://modrinth.com/mod/autofeedfabric/',
-    githubUrl: 'https://github.com/Hakutyan-bai/AutoFeedMod',
-    demoText: '下载地址'
+    title: '🧸 MoonTV',
+    description: '一个整合了大部分视频网站源的视频播放平台，支持登录同步多设备收藏夹',
+    demoUrl: 'https://tv.takinablog.top',
+    githubUrl: 'https://github.com/kawaii993/MoonTV',
+    demoText: '预览项目'
   },
   {
     title: '示例项目',
@@ -153,76 +146,9 @@ const projects: Project[] = [
     githubUrl: '#',
     demoText: '暂无预览'
   },
-  {
-    title: '示例项目',
-    description: '一个示例项目的描述',
-    demoUrl: '#',
-    githubUrl: '#',
-    demoText: '暂无预览'
-  },
-  {
-    title: '示例项目',
-    description: '一个示例项目的描述',
-    demoUrl: '#',
-    githubUrl: '#',
-    demoText: '暂无预览'
-  },
-  {
-    title: '示例项目',
-    description: '一个示例项目的描述',
-    demoUrl: '#',
-    githubUrl: '#',
-    demoText: '暂无预览'
-  },
-  {
-    title: '示例项目',
-    description: '一个示例项目的描述',
-    demoUrl: '#',
-    githubUrl: '#',
-    demoText: '暂无预览'
-  },
-  {
-    title: '示例项目',
-    description: '一个示例项目的描述',
-    demoUrl: '#',
-    githubUrl: '#',
-    demoText: '暂无预览'
-  },
-  {
-    title: '示例项目',
-    description: '一个示例项目的描述',
-    demoUrl: '#',
-    githubUrl: '#',
-    demoText: '暂无预览'
-  },
-  {
-    title: '示例项目',
-    description: '一个示例项目的描述',
-    demoUrl: '#',
-    githubUrl: '#',
-    demoText: '暂无预览'
-  },
-  {
-    title: '示例项目',
-    description: '一个示例项目的描述',
-    demoUrl: '#',
-    githubUrl: '#',
-    demoText: '暂无预览'
-  },
-  {
-    title: '示例项目',
-    description: '一个示例项目的描述',
-    demoUrl: '#',
-    githubUrl: '#',
-    demoText: '暂无预览'
-  },
-  {
-    title: '示例项目',
-    description: '一个示例项目的描述',
-    demoUrl: '#',
-    githubUrl: '#',
-    demoText: '暂无预览'
-  }
+  
+  
+  
 ]
 
 // 计算分页数据

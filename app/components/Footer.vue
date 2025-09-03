@@ -6,12 +6,14 @@ const currentYear = new Date().getFullYear()
 <template>
   <footer class="py-8 text-center bg-primary/10">
     <div class="max-w-screen-xl mx-auto px-4">
-      <p class="text-xl font-fumofumo m-0 opacity-80 text-primary">Fumomo - 简约而不简单</p>
-      <p class="text-sm mt-2 text-muted">© {{ currentYear }} Fumomo. 保留所有权利。</p>
+      <p class="text-xl font-fumofumo m-0 opacity-80 text-primary">Philia - 简约而不简单</p>
+      <p class="text-sm mt-2 text-muted">© {{ currentYear }} Philia. 保留所有权利。</p>
       <p class="text-sm mt-1 text-muted">
-        Powered by 
-        <a href="https://nuxt.com" target="_blank" rel="noopener noreferrer" class="hover:underline transition-all duration-300 text-primary">Nuxt</a> &
-        <a href="https://github.com/Hakutyan-bai/fumofumo" target="_blank" rel="noopener noreferrer" class="hover:underline transition-all duration-300 text-primary">Fumomo</a>
+        Powered by
+        <a href="https://nuxt.com" target="_blank" rel="noopener noreferrer"
+          class="hover:underline transition-all duration-300 text-primary">Nuxt</a> &
+        <a href="https://github.com/kawaii993/TakinaBlog" target="_blank" rel="noopener noreferrer"
+          class="hover:underline transition-all duration-300 text-primary">TakinaBlog</a>
       </p>
     </div>
   </footer>

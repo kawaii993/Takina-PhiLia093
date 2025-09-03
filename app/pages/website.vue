@@ -30,11 +30,11 @@ const handleScroll = () => {
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop
   const windowHeight = window.innerHeight
   const docHeight = document.documentElement.scrollHeight
-  
+
   // 计算滚动进度
   const maxScroll = docHeight - windowHeight
   scrollProgress.value = Math.min((scrollTop / maxScroll) * 100, 100)
-  
+
   // 检查是否滚动到底部
   const isAtBottom = scrollTop + windowHeight >= docHeight - 10
   atBottom.value = isAtBottom
@@ -46,7 +46,7 @@ const handleWheel = (event: WheelEvent) => {
   if (atBottom.value && event.deltaY > 0 && !showDisperse.value) {
     event.preventDefault()
     showDisperse.value = true
-    
+
     // 延迟导航到首页
     setTimeout(() => {
       navigateTo('/')
@@ -57,16 +57,16 @@ const handleWheel = (event: WheelEvent) => {
 onMounted(() => {
   // 检测移动设备
   isMobile.value = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) || window.innerWidth < 768
-  
+
   // 监听窗口大小变化
   const handleResize = () => {
     isMobile.value = window.innerWidth < 768
   }
   window.addEventListener('resize', handleResize)
-  
+
   window.addEventListener('scroll', handleScroll)
   window.addEventListener('wheel', handleWheel, { passive: false })
-  
+
   onUnmounted(() => {
     window.removeEventListener('scroll', handleScroll)
     window.removeEventListener('wheel', handleWheel)
@@ -96,28 +96,28 @@ interface Website {
 // 网站数据
 const websites: Website[] = [
   {
-    title: '个人主页',
-    description: '这是我的个人主页，也就是本站',
-    url: 'https://fumomo-nuxt.vercel.app/',
-    linkText: '点击查看 →'
+    title: '博客主站 - TakinaBlog',
+    description: '具备博客以及其他功能的主网站',
+    url: 'https://home.takinablog.top/',
+    linkText: '🏡 点击查看 →'
   },
   {
-    title: '个人博客',
-    description: '分享一些技术文章',
-    url: 'https://blog.sakura.ink',
-    linkText: '点击查看 →'
+    title: '文字站 - Philia',
+    description: '基于博客主站而诞生的衍生文字站，也就是本站',
+    url: 'https://philia.takinablog.top',
+    linkText: '📒 点击查看 →'
   },
   {
     title: '站点监控',
-    description: '基于 UptimeRobot 接口',
-    url: 'https://jk.skura.me',
-    linkText: '查看站点状态 →'
+    description: '基于 UptimeRobot 接口对Takina旗下网站进行监控',
+    url: 'https://status.takinablog.top/',
+    linkText: '🌏️ 查看站点状态 →'
   },
   {
-    title: '示例网站 1',
-    description: '这是一个示例网站的描述',
-    url: '#',
-    linkText: '示例链接 →'
+    title: '视频集合网站 - MoonTV',
+    description: '功能齐全的个人视频网站',
+    url: 'https://tv.takinablog.top',
+    linkText: '🧸 立即观影 →'
   },
   {
     title: '示例网站 2',
@@ -155,18 +155,7 @@ const websites: Website[] = [
     url: '#',
     linkText: '示例链接 →'
   },
-  {
-    title: '示例网站 8',
-    description: '继续测试分页',
-    url: '#',
-    linkText: '示例链接 →'
-  },
-  {
-    title: '示例网站 9',
-    description: '最后的测试内容',
-    url: '#',
-    linkText: '示例链接 →'
-  }
+
 ]
 
 // 计算分页数据
@@ -182,88 +171,66 @@ const displayedWebsites = computed(() => allWebsites.slice(startIndex.value, end
   <div>
     <main class="flex flex-col items-center min-h-screen website-page pt-24" :class="{ 'dispersed': showDisperse }">
       <section ref="websiteSectionRef" class="bg-white rounded-3xl shadow-lg p-12 max-w-4xl w-full mb-12 component-card"
-               style="box-shadow: 0 4px 24px rgba(139,90,140,0.08);">
+        style="box-shadow: 0 4px 24px rgba(139,90,140,0.08);">
         <h1 class="text-primary text-4xl mb-2 text-center font-fumofumo">{{ pageConfig.title }}</h1>
-        <p v-if="'description' in pageConfig" class="text-muted text-xl text-center mb-8">{{ pageConfig.description }}</p>
+        <p v-if="'description' in pageConfig" class="text-muted text-xl text-center mb-8">{{ pageConfig.description }}
+        </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <a 
-            v-for="website in displayedWebsites" 
-            :key="website.title"
-            :href="website.url" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            class="bg-gradient-to-br from-gray-50 to-pink-50 rounded-2xl p-6 text-center border border-gray-200 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer no-underline text-inherit hover:shadow-lg"
-          >
+          <a v-for="website in displayedWebsites" :key="website.title" :href="website.url" target="_blank"
+            rel="noopener noreferrer"
+            class="bg-gradient-to-br from-gray-50 to-pink-50 rounded-2xl p-6 text-center border border-gray-200 transition-all duration-200 hover:-translate-y-0.5 cursor-pointer no-underline text-inherit hover:shadow-lg">
             <h3 class="text-primary text-xl mb-2 font-fumofumo">{{ website.title }}</h3>
             <p class="text-muted text-base leading-relaxed m-0">{{ website.description }}</p>
             <div class="mt-3 text-sm text-primary opacity-75">{{ website.linkText }}</div>
           </a>
         </div>
       </section>
-      
+
       <!-- 分页导航 -->
-      <section 
-        ref="paginationRef"
-        v-if="totalPages > 1" 
+      <section ref="paginationRef" v-if="totalPages > 1"
         class="bg-white rounded-2xl shadow-lg p-6 max-w-4xl w-full mb-12 component-card"
-        style="box-shadow: 0 4px 24px rgba(139,90,140,0.08);"
-      >
+        style="box-shadow: 0 4px 24px rgba(139,90,140,0.08);">
         <div class="flex justify-center items-center gap-2">
           <!-- 上一页按钮 -->
-          <NuxtLink 
-            v-if="currentPage > 1"
-            :to="`/website?page=${currentPage - 1}`"
-            class="flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-gray-200 hover:scale-105 no-underline"
-          >
+          <NuxtLink v-if="currentPage > 1" :to="`/website?page=${currentPage - 1}`"
+            class="flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-gray-200 hover:scale-105 no-underline">
             <i class="fas fa-chevron-left"></i>
             <span>上一页</span>
           </NuxtLink>
-          <span 
-            v-else
-            class="flex items-center gap-2 bg-gray-50 text-gray-400 px-4 py-2 rounded-lg text-sm font-medium cursor-not-allowed"
-          >
+          <span v-else
+            class="flex items-center gap-2 bg-gray-50 text-gray-400 px-4 py-2 rounded-lg text-sm font-medium cursor-not-allowed">
             <i class="fas fa-chevron-left"></i>
             <span>上一页</span>
           </span>
-          
+
           <!-- 页码显示 -->
           <div class="flex items-center gap-2 mx-4">
             <template v-for="pageNum in totalPages" :key="pageNum">
-              <span 
-                v-if="pageNum === currentPage"
-                class="bg-primary text-white px-3 py-2 rounded-lg text-sm font-medium"
-              >
+              <span v-if="pageNum === currentPage"
+                class="bg-primary text-white px-3 py-2 rounded-lg text-sm font-medium">
                 {{ pageNum }}
               </span>
-              <NuxtLink 
-                v-else
-                :to="`/website?page=${pageNum}`"
-                class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-gray-200 hover:scale-105 no-underline"
-              >
+              <NuxtLink v-else :to="`/website?page=${pageNum}`"
+                class="bg-gray-100 text-gray-700 px-3 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-gray-200 hover:scale-105 no-underline">
                 {{ pageNum }}
               </NuxtLink>
             </template>
           </div>
-          
+
           <!-- 下一页按钮 -->
-          <NuxtLink 
-            v-if="currentPage < totalPages"
-            :to="`/website?page=${currentPage + 1}`"
-            class="flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-gray-200 hover:scale-105 no-underline"
-          >
+          <NuxtLink v-if="currentPage < totalPages" :to="`/website?page=${currentPage + 1}`"
+            class="flex items-center gap-2 bg-gray-100 text-gray-700 px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200 hover:bg-gray-200 hover:scale-105 no-underline">
             <span>下一页</span>
             <i class="fas fa-chevron-right"></i>
           </NuxtLink>
-          <span 
-            v-else
-            class="flex items-center gap-2 bg-gray-50 text-gray-400 px-4 py-2 rounded-lg text-sm font-medium cursor-not-allowed"
-          >
+          <span v-else
+            class="flex items-center gap-2 bg-gray-50 text-gray-400 px-4 py-2 rounded-lg text-sm font-medium cursor-not-allowed">
             <span>下一页</span>
             <i class="fas fa-chevron-right"></i>
           </span>
         </div>
-        
+
         <!-- 分页信息 -->
         <div class="text-center mt-4 text-gray-500 text-sm">
           第 {{ currentPage }} 页，共 {{ totalPages }} 页 · 共 {{ totalItems }} 个网站
@@ -271,33 +238,23 @@ const displayedWebsites = computed(() => allWebsites.slice(startIndex.value, end
       </section>
 
       <!-- 滚动提示和进度指示器 -->
-      <div 
-        v-if="!showDisperse && !isMobile"
-        class="fixed bottom-8 right-8 text-center opacity-70 hover:opacity-100 transition-opacity duration-300"
-      >
-        <div 
-          class="mb-4"
-          :class="atBottom ? 'animate-pulse' : 'animate-bounce'"
-        >
-          <i 
-            class="text-2xl mb-2 block"
-            :class="atBottom ? 'fas fa-arrow-down text-green-500' : 'fas fa-mouse text-primary'"
-          ></i>
+      <div v-if="!showDisperse && !isMobile"
+        class="fixed bottom-8 right-8 text-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+        <div class="mb-4" :class="atBottom ? 'animate-pulse' : 'animate-bounce'">
+          <i class="text-2xl mb-2 block"
+            :class="atBottom ? 'fas fa-arrow-down text-green-500' : 'fas fa-mouse text-primary'"></i>
           <p class="text-sm text-muted">
             {{ atBottom ? '再向下滚动回到首页' : '滚动到底部' }}
           </p>
         </div>
-        
+
         <!-- 滚动进度条 -->
         <div class="w-32 h-2 bg-gray-200 rounded-full overflow-hidden">
-          <div 
-            class="h-full transition-all duration-150 ease-out rounded-full"
-            :class="atBottom ? 'bg-green-500' : 'bg-primary'"
-            :style="{ width: scrollProgress + '%' }"
-          ></div>
+          <div class="h-full transition-all duration-150 ease-out rounded-full"
+            :class="atBottom ? 'bg-green-500' : 'bg-primary'" :style="{ width: scrollProgress + '%' }"></div>
         </div>
         <div class="text-xs text-muted mt-1">
-          {{ Math.round(scrollProgress) }}% 
+          {{ Math.round(scrollProgress) }}%
           <span v-if="atBottom" class="text-green-600 ml-1">✓ 已到底部</span>
         </div>
       </div>
@@ -308,7 +265,7 @@ const displayedWebsites = computed(() => allWebsites.slice(startIndex.value, end
 <style scoped>
 /* 网站页面特定样式 */
 .website-page .hover\:shadow-lg:hover {
-  box-shadow: 0 8px 20px rgba(139,90,140,0.15);
+  box-shadow: 0 8px 20px rgba(139, 90, 140, 0.15);
 }
 
 .website-page {
@@ -329,6 +286,7 @@ const displayedWebsites = computed(() => allWebsites.slice(startIndex.value, end
     transform: translateX(0) translateY(0) rotateZ(0deg) scale(1);
     opacity: 1;
   }
+
   100% {
     transform: translateX(0) translateY(-100vh) rotateZ(180deg) scale(0.2);
     opacity: 0;

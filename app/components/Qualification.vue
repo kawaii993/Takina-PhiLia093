@@ -41,8 +41,8 @@ const education: Education[] = [
   {
     title: '计算机科学与技术',
     period: 'End : 2024',
-    school: '湖北经济学院',
-    courses: '主修内容：前端开发、数据分析'
+    school: '学士学位',
+    courses: '主修内容：编程开发、数据分析'
   }
 ]
 
@@ -50,7 +50,7 @@ const skills: Skill[] = [
   {
     category: '游戏运营',
     technologies: [
-      { name: '社区运营', color: 'bg-gray-100 text-gray-800' },
+      { name: '社区运营', color: 'bg-pink-100 text-gray-800' },
       { name: '版本发行', color: 'bg-red-100 text-red-800' },
       { name: '活动策划', color: 'bg-teal-100 text-teal-800' }
     ]
@@ -82,7 +82,7 @@ const workExperience: WorkExperience[] = [
   {
     position: '游戏运营',
     period: '2024.06 - 2025.06',
-    company: '猎游',
+    company: '深圳',
     responsibilities: [
       '负责游戏版本发行与更新规划，协调研发与测试团队，确保版本稳定上线',
       '策划与执行线上节日活动、专题活动，提升用户活跃度与留存率',
@@ -95,7 +95,7 @@ const workExperience: WorkExperience[] = [
   {
     position: '前端开发实习生',
     period: '2023.06 - 2023.12',
-    company: '软通动力',
+    company: '武汉',
     responsibilities: [
       '参与公司主要产品的前端开发，使用Vue.js构建用户界面',
       '优化页面性能，提升用户体验',
@@ -273,4 +273,18 @@ const awards: Award[] = [
 
 <style scoped>
 /* 组件特定样式 */
+section {
+  font-size: 1rem;
+  /* 默认 16px，比 text-sm 稍大 */
+  line-height: 1.6;
+}
+
+section .text-sm {
+  font-size: 0.95rem;
+  /* 稍微大一点 */
+}
+
+section .text-xs {
+  font-size: 0.85rem;
+}
 </style>

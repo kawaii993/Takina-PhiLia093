@@ -9,18 +9,18 @@ interface TimelineItem {
 const timelineItems: TimelineItem[] = [
   {
     date: '2025.08',
-    title: '整理并复盘第一段职场经历，规划下一步的方向',
-    description: '这一世，我要夺回属于我的一切。'
+    title: '整理并复盘第一段职场经历',
+    description: '提炼可迁移能力，并规划下一步发展方向。这一世，我要夺回属于我的一切！'
   },
   {
     date: '2024.06',
     title: '正式进入游戏行业',
-    description: '本科毕业之后正式进入游戏行业，开始升级打怪之路！'
+    description: '本科毕业后进入游戏行业，参与运营累计20+款产品，开始升级打怪之路。'
   },
   {
     date: '2023.12',
-    title: '第一次合作',
-    description: '与kai合作开始开发游戏周边项目，创立了Apex线上相关道具店铺及网页站，制作发布各种攻略前瞻内容等，独立提升运营能力。'
+    title: '游戏相关合作项目',
+    description: '与伙伴合作开发游戏周边项目（Apex 道具店铺 & 攻略站），实现电商转化与内容变现，独立提升从内容制作到用户运营的全链路能力。'
   },
   {
     date: '2021.05',
@@ -28,24 +28,19 @@ const timelineItems: TimelineItem[] = [
     description: '船新的里程碑！！！'
   },
   {
-    date: '2020.04.09',
-    title: 'b站单个视频10w播放',
-    description: '对游戏的热爱有了不错的数据体现，这使我充满了决心。'
-  },
-  {
-    date: '2020.04.07',
-    title: 'b站第一个2w播放视频',
-    description: '制作的视频中第一个突破2w播放的游戏攻略视频，有正反馈后开始继续创作。'
+    date: '2020.04',
+    title: 'b站单个视频2w / 10w播放',
+    description: '创作游戏攻略视频，运营个人 B 站频道，奠定了持续创作与数据分析的基础，对游戏的热爱有了不错的数据体现，这使我充满了决心。'
   },
   {
     date: '2019.07',
     title: '正式接触编程开发相关内容',
-    description: '开始接触开发，学习了HTML、CSS和JavaScript，Mysql、Python等语言。'
+    description: '自学编程开发，掌握 HTML、CSS、JavaScript、Python、MySQL 基础，后续在项目中能结合数据与前端做小型工具。'
   },
   {
     date: '2013.10',
-    title: '第一次开始深度体验的大型游戏，解锁游戏探索之路',
-    description: '从洛克王国赛尔号这类网页游戏转到Minecraft、使命召唤等大型游戏。'
+    title: '游戏探索之路',
+    description: '第一次深度体验 Minecraft、使命召唤等大型游戏，培养了对游戏机制、玩家体验和社区文化的敏感度。'
   }
 ]
 </script>

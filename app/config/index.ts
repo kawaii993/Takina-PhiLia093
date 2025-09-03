@@ -22,7 +22,7 @@ export const siteConfig = {
     title: "Takina PhiLia093",
 
     // 网站副标题 - 显示在首页标题下方
-    subtitle: "你好，欢迎来到Takina的个人主页PhiLia！",
+    subtitle: "你好，欢迎来到Takina的文字站PhiLia！",
 
     // 网站描述 - 用于SEO和社交媒体分享
     description: "欢迎来到Takina PhiLia的温柔世界，在这里分享技术、生活和思考",
@@ -43,13 +43,13 @@ export const siteConfig = {
     pageTitle: "我的文章",
 
     // 文章页面描述
-    pageDescription: "技术分享与生活感悟",
+    pageDescription: "技术分享与学习记录",
 
     // 每页显示文章数量
     postsPerPage: 10,
 
     // 文章来源说明
-    sourceDescription: "文章内容来自我的博客"
+    sourceDescription: "文章内容来自我的博客TakinaBlog"
   },
 
   // ========================================
@@ -66,7 +66,7 @@ export const siteConfig = {
     features: [
       {
         title: "技术分享",
-        description: "分享编程技巧、框架使用心得和技术思考"
+        description: "分享技术知识、框架使用心得和行业思考"
       },
       {
         title: "生活记录",
@@ -109,10 +109,10 @@ export const siteConfig = {
   personal: {
     // 基本信息
     name: "Takina",
-    bio: "书里总爱写到喜出望外的傍晚。",
-    hobby: "网页设计、游戏运营",
+    bio: "书里总爱写到喜出望外的傍晚",
+    hobby: "创造、运营、收集",
     location: "广东深圳",
-    learning: "数据分析、游戏拆解、社区运营",
+    learning: "数据分析、游戏拆解、功能开发",
     avatar: "/aigre.jpg",
 
     // 关于页面社交媒体链接
