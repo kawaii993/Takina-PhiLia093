@@ -119,18 +119,18 @@ const projects: Project[] = [
     demoText: '预览项目'
   },
   {
-    title: '示例项目',
-    description: '一个示例项目的描述',
-    demoUrl: '#',
-    githubUrl: '#',
-    demoText: '暂无预览'
+    title: '🔍️ Pansou',
+    description: '强大的网盘资源搜索接口',
+    demoUrl: 'https://so.252035.xyz/',
+    githubUrl: 'https://so.252035.xyz/',
+    demoText: '预览项目'
   },
   {
-    title: '示例项目',
-    description: '一个示例项目的描述',
-    demoUrl: '#',
-    githubUrl: '#',
-    demoText: '暂无预览'
+    title: '🚀 NewsNow',
+    description: '优雅阅读实时最热的新闻',
+    demoUrl: 'https://news.takinablog.top/',
+    githubUrl: 'https://github.com/kawaii993/newsnow',
+    demoText: '预览项目'
   },
   {
     title: '示例项目',

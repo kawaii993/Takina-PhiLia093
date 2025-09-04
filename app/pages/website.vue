@@ -120,16 +120,16 @@ const websites: Website[] = [
     linkText: '🧸 立即观影 →'
   },
   {
-    title: '示例网站 2',
-    description: '这是另一个示例网站的描述',
-    url: '#',
-    linkText: '示例链接 →'
+    title: '网盘搜索 - Pansou',
+    description: '强大的网盘资源搜索接口',
+    url: 'https://so.252035.xyz/',
+    linkText: '🔍️ 在线搜索 →'
   },
   {
-    title: '示例网站 3',
-    description: '更多示例网站内容',
-    url: '#',
-    linkText: '示例链接 →'
+    title: '每日热点 - NewsNow',
+    description: '优雅阅读实时最热的新闻',
+    url: 'https://news.takinablog.top/',
+    linkText: '🚀 网上冲浪 →'
   },
   {
     title: '示例网站 4',
